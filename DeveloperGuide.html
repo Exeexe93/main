@@ -762,23 +762,20 @@ If the <code>currentStatePointer</code> is at index <code>addressBookStateList.s
 <div class="paragraph">
 <p>(For all use cases below, the <strong>System</strong> is the <code>AddressBook</code> and the <strong>Actor</strong> is the <code>user</code>, unless specified otherwise)</p>
 </div>
-<h3 id="use-case-delete-person" class="discrete">Use case: Delete person</h3>
+<h3 id="use-case-uc01-add-an-order" class="discrete">Use case: UC01 - Add an order</h3>
 <div class="paragraph">
 <p><strong>MSS</strong></p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>User requests to list persons</p>
+<p>User key in the order details.</p>
 </li>
 <li>
-<p>AddressBook shows a list of persons</p>
+<p>Delino add the order details.</p>
 </li>
 <li>
-<p>User requests to delete a specific person in the list</p>
-</li>
-<li>
-<p>AddressBook deletes the person</p>
+<p>Delino displays order added.</p>
 <div class="paragraph">
 <p>Use case ends.</p>
 </div>
@@ -791,19 +788,53 @@ If the <code>currentStatePointer</code> is at index <code>addressBookStateList.s
 <div class="ulist none">
 <ul class="none">
 <li>
-<p>2a. The list is empty.</p>
+<p>1a. Delino detects invalid syntax.</p>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>1a1. Delino shows an error message.</p>
 <div class="paragraph">
 <p>Use case ends.</p>
 </div>
 </li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<h3 id="use-case-uc02-clear-all-orders" class="discrete">Use case: UC02 - Clear all orders</h3>
+<div class="paragraph">
+<p><strong>MSS</strong></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
 <li>
-<p>3a. The given index is invalid.</p>
+<p>User requests to clear all orders.</p>
+</li>
+<li>
+<p>Delino clear all existing orders.</p>
+</li>
+<li>
+<p>Delino displays order cleared message.</p>
+<div class="paragraph">
+<p>Use case ends.</p>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><strong>Extensions</strong></p>
+</div>
 <div class="ulist none">
 <ul class="none">
 <li>
-<p>3a1. AddressBook shows an error message.</p>
+<p>1a. Delino detects invalid syntax.</p>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>1a1. Delino shows an error message.</p>
 <div class="paragraph">
-<p>Use case resumes at step 2.</p>
+<p>Use case ends.</p>
 </div>
 </li>
 </ul>
@@ -811,8 +842,219 @@ If the <code>currentStatePointer</code> is at index <code>addressBookStateList.s
 </li>
 </ul>
 </div>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>1b. Delino detects no orders.</p>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>1b1. Delino shows no order to be cleared message.</p>
 <div class="paragraph">
-<p><em>{More to be added}</em></p>
+<p>Use case ends.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<h3 id="use-case-uc03-delete-an-order" class="discrete">Use case: UC03 - Delete an order</h3>
+<div class="paragraph">
+<p><strong>MSS</strong></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>User requests to list orders (UC10).</p>
+</li>
+<li>
+<p>User requests to delete a specific order in the list.</p>
+</li>
+<li>
+<p>Delino deletes the order.</p>
+</li>
+<li>
+<p>Delino displays order deleted.</p>
+<div class="paragraph">
+<p>Use case ends.</p>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><strong>Extensions</strong></p>
+</div>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>3a. Delino detects invalid syntax.</p>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>3a1. Delino shows an error message.</p>
+<div class="paragraph">
+<p>Use case ends.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>3b. Delino does not detect any order with the transaction id.</p>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>3b1. Delino shows no order found message.</p>
+<div class="paragraph">
+<p>Use case ends.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<h3 id="use-case-uc04-mark-order-as-done" class="discrete">Use case: UC04 - Mark order as done</h3>
+<div class="paragraph">
+<p><strong>MSS</strong></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>User request to mark order as done.</p>
+</li>
+<li>
+<p>Delino changes order status to done.</p>
+</li>
+<li>
+<p>Delino display marked order.</p>
+<div class="paragraph">
+<p>Use case ends.</p>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><strong>Extensions</strong></p>
+</div>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>1a. Delino detects invalid syntax.</p>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>1a1. Delino shows an error message.</p>
+<div class="paragraph">
+<p>Use case ends.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>1b. Delino does not detect any order with the transaction id.</p>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>1b1. Delino shows no order found message.</p>
+<div class="paragraph">
+<p>Use case ends.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<h3 id="use-case-uc05-editing-order-details" class="discrete">Use case: UC05 - Editing order details</h3>
+<div class="paragraph">
+<p><strong>MSS</strong></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>User request to edit order details.</p>
+</li>
+<li>
+<p>Delino edit the order details</p>
+</li>
+<li>
+<p>Delino display changes made.</p>
+<div class="paragraph">
+<p>Use case ends.</p>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><strong>Extensions</strong></p>
+</div>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>1a. Delino detects invalid syntax.</p>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>1a1. Delino shows an error message.</p>
+<div class="paragraph">
+<p>Use case ends.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>1b. Delino does not detect any order with the transaction id.</p>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>1b1. Delino shows no order found message.</p>
+<div class="paragraph">
+<p>Use case ends.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<h3 id="use-case-uc06-exit-the-program" class="discrete">Use case: UC06 - Exit the program</h3>
+<div class="paragraph">
+<p><strong>Precondition: User keys in correct exit command syntax.</strong></p>
+</div>
+<div class="paragraph">
+<p><strong>MSS</strong></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>User request to exit the program.</p>
+</li>
+<li>
+<p>Delino displays goodbye message.</p>
+</li>
+<li>
+<p>Delino closes the application window.</p>
+<div class="paragraph">
+<p>Use case ends.</p>
+</div>
+</li>
+</ol>
 </div>
 </div>
 </div>
@@ -1000,4 +1242,4 @@ Expected: Similar to previous.</p>
 </div>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-02-25 07:10:31 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-02-25 07:13:48 UTC</div></div></div></body></html>
