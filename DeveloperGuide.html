@@ -760,7 +760,7 @@ If the <code>currentStatePointer</code> is at index <code>addressBookStateList.s
 <h2 id="use-cases"><a class="link" href="#use-cases">Appendix C: Use Cases</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>(For all use cases below, the <strong>System</strong> is the <code>Delino</code> and the <strong>Actor</strong> is the <code>user</code>, unless specified otherwise)</p>
+<p>(For all use cases below, the <strong>System</strong> is the <code>AddressBook</code> and the <strong>Actor</strong> is the <code>user</code>, unless specified otherwise)</p>
 </div>
 <h3 id="use-case-uc01-add-an-order" class="discrete">Use case: UC01 - Add an order</h3>
 <div class="paragraph">
@@ -905,7 +905,7 @@ If the <code>currentStatePointer</code> is at index <code>addressBookStateList.s
 <div class="ulist none">
 <ul class="none">
 <li>
-<p>3b. Delino unable to detect any order with the transaction id.</p>
+<p>3b. Delino does not detect any order with the transaction id.</p>
 <div class="ulist none">
 <ul class="none">
 <li>
@@ -962,7 +962,7 @@ If the <code>currentStatePointer</code> is at index <code>addressBookStateList.s
 <div class="ulist none">
 <ul class="none">
 <li>
-<p>1b. Delino unable to detect any order with the transaction id.</p>
+<p>1b. Delino does not detect any order with the transaction id.</p>
 <div class="ulist none">
 <ul class="none">
 <li>
@@ -1019,7 +1019,7 @@ If the <code>currentStatePointer</code> is at index <code>addressBookStateList.s
 <div class="ulist none">
 <ul class="none">
 <li>
-<p>1b. Delino unable to detect any order with the transaction id.</p>
+<p>1b. Delino does not detect any order with the transaction id.</p>
 <div class="ulist none">
 <ul class="none">
 <li>
@@ -1055,362 +1055,6 @@ If the <code>currentStatePointer</code> is at index <code>addressBookStateList.s
 </div>
 </li>
 </ol>
-</div>
-<h3 id="use-case-uc07-find-an-order" class="discrete">Use case: UC07 - Find an order</h3>
-<div class="paragraph">
-<p><strong>MSS</strong></p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>User request to find specific order by transaction id</p>
-</li>
-<li>
-<p>Delino display the requested order.</p>
-<div class="paragraph">
-<p>Use case ends.</p>
-</div>
-</li>
-</ol>
-</div>
-<div class="paragraph">
-<p><strong>Extensions</strong></p>
-</div>
-<div class="ulist none">
-<ul class="none">
-<li>
-<p>1a. Delino detects invalid syntax.</p>
-<div class="ulist none">
-<ul class="none">
-<li>
-<p>1a1. Delino shows an error message.</p>
-<div class="paragraph">
-<p>Use case ends.</p>
-</div>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-<div class="ulist none">
-<ul class="none">
-<li>
-<p>1b. Delino unable to find order with the transaction id.</p>
-<div class="ulist none">
-<ul class="none">
-<li>
-<p>1b1. Delino display order not found message.</p>
-<div class="paragraph">
-<p>Use case ends.</p>
-</div>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-<h3 id="use-case-uc08-request-for-help" class="discrete">Use case: UC08 - Request for help</h3>
-<div class="paragraph">
-<p><strong>MSS</strong></p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>User request for help to navigate around application.</p>
-</li>
-<li>
-<p>Delino shows help message.</p>
-<div class="paragraph">
-<p>Use case ends.</p>
-</div>
-</li>
-</ol>
-</div>
-<h3 id="use-case-uc09-importing-order-details" class="discrete">Use case: UC09 -  Importing order details</h3>
-<div class="paragraph">
-<p><strong>MSS</strong></p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>User requests to import orders from an external file.</p>
-</li>
-<li>
-<p>Delino checks for file existence.</p>
-</li>
-<li>
-<p>Delino imports all orders from the external file.</p>
-</li>
-<li>
-<p>Delino displays all orders imported.</p>
-<div class="paragraph">
-<p>Use case ends.</p>
-</div>
-</li>
-</ol>
-</div>
-<div class="paragraph">
-<p><strong>Extensions</strong></p>
-</div>
-<div class="ulist none">
-<ul class="none">
-<li>
-<p>1a. Delino detects invalid syntax.</p>
-<div class="ulist none">
-<ul class="none">
-<li>
-<p>1a1. Delino shows an error message.</p>
-<div class="paragraph">
-<p>Use case ends.</p>
-</div>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-<div class="ulist none">
-<ul class="none">
-<li>
-<p>2a. Delino detects invalid file path.</p>
-<div class="ulist none">
-<ul class="none">
-<li>
-<p>2a1. Delino shows the invalid file path error message</p>
-<div class="paragraph">
-<p>Use case ends.</p>
-</div>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-<div class="ulist none">
-<ul class="none">
-<li>
-<p>3a. Delino is unable to open the file.</p>
-<div class="ulist none">
-<ul class="none">
-<li>
-<p>3a1. Delino shows permission denied error message.</p>
-<div class="paragraph">
-<p>Use case ends.</p>
-</div>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-<h3 id="use-case-uc10-listing-all-orders" class="discrete">Use case: UC10 - Listing all orders</h3>
-<div class="paragraph">
-<p><strong>MSS</strong></p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>User requests to view the list of orders.</p>
-</li>
-<li>
-<p>Delino display list of orders.</p>
-<div class="paragraph">
-<p>Use case ends.</p>
-</div>
-</li>
-</ol>
-</div>
-<div class="paragraph">
-<p><strong>Extensions</strong></p>
-</div>
-<div class="ulist none">
-<ul class="none">
-<li>
-<p>1a. Delino detects invalid syntax.</p>
-<div class="ulist none">
-<ul class="none">
-<li>
-<p>1a1. Delino shows an error message.</p>
-<div class="paragraph">
-<p>Use case ends.</p>
-</div>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-<div class="ulist none">
-<ul class="none">
-<li>
-<p>2a. Delino detects no orders.</p>
-<div class="ulist none">
-<ul class="none">
-<li>
-<p>2a1. Delino shows empty order list message.</p>
-<div class="paragraph">
-<p>Use case ends.</p>
-</div>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-<h3 id="use-case-uc11-order-returns" class="discrete">Use case: UC11 - Order returns</h3>
-<div class="paragraph">
-<p><strong>MSS</strong></p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>User requests to add order return.</p>
-</li>
-<li>
-<p>Delino add order return.</p>
-</li>
-<li>
-<p>Delino display order return added.</p>
-<div class="paragraph">
-<p>Use case ends.</p>
-</div>
-</li>
-</ol>
-</div>
-<div class="paragraph">
-<p><strong>Extensions</strong></p>
-</div>
-<div class="ulist none">
-<ul class="none">
-<li>
-<p>1a. Delino detects invalid syntax.</p>
-<div class="ulist none">
-<ul class="none">
-<li>
-<p>1a1. Delino shows an error message.</p>
-<div class="paragraph">
-<p>Use case ends.</p>
-</div>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-<h3 id="use-case-uc12-sort-orders" class="discrete">Use case: UC12 - Sort orders</h3>
-<div class="paragraph">
-<p><strong>MSS</strong></p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>User requests to sort the orders</p>
-</li>
-<li>
-<p>Delino sort the orders</p>
-</li>
-<li>
-<p>Delino display the sorted list</p>
-<div class="paragraph">
-<p>Use case ends.</p>
-</div>
-</li>
-</ol>
-</div>
-<div class="paragraph">
-<p><strong>Extensions</strong></p>
-</div>
-<div class="ulist none">
-<ul class="none">
-<li>
-<p>1a. Delino detects invalid syntax.</p>
-<div class="ulist none">
-<ul class="none">
-<li>
-<p>1a1. Delino shows an error message.</p>
-<div class="paragraph">
-<p>Use case ends.</p>
-</div>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-<div class="ulist none">
-<ul class="none">
-<li>
-<p>2a. Delino detects no orders.</p>
-<div class="ulist none">
-<ul class="none">
-<li>
-<p>2a1. Delino shows empty order list message.</p>
-<div class="paragraph">
-<p>Use case ends.</p>
-</div>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-<h3 id="use-case-uc13-undo-previous-command" class="discrete">Use case: UC13 - Undo previous command</h3>
-<div class="paragraph">
-<p><strong>MSS</strong></p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>User request to undo current command</p>
-</li>
-<li>
-<p>Delino revert back to the previous state.</p>
-</li>
-<li>
-<p>Delino displays undo message.</p>
-<div class="paragraph">
-<p>Use case ends.</p>
-</div>
-</li>
-</ol>
-</div>
-<div class="paragraph">
-<p><strong>Extensions</strong></p>
-</div>
-<div class="ulist none">
-<ul class="none">
-<li>
-<p>1a. Delino detects invalid syntax.</p>
-<div class="ulist none">
-<ul class="none">
-<li>
-<p>1a1. Delino shows an error message.</p>
-<div class="paragraph">
-<p>Use case ends.</p>
-</div>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-<div class="ulist none">
-<ul class="none">
-<li>
-<p>2a. Delino detects nothing to be undo.</p>
-<div class="ulist none">
-<ul class="none">
-<li>
-<p>2a1. Delino shows nothing to be undone message.</p>
-<div class="paragraph">
-<p>Use case ends.</p>
-</div>
-</li>
-</ul>
-</div>
-</li>
-</ul>
 </div>
 </div>
 </div>
@@ -1598,4 +1242,4 @@ Expected: Similar to previous.</p>
 </div>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-02-25 07:56:48 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-02-25 08:00:36 UTC</div></div></div></body></html>
