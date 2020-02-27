@@ -23,6 +23,8 @@
 <li><a href="#exiting-the-program-code-exit-code">3.8. Exiting the program : <code>exit</code></a></li>
 <li><a href="#saving-the-data">3.9. Saving the data</a></li>
 <li><a href="#encrypting-data-files-code-coming-in-v2-0-code">3.10. Encrypting data files <code>[coming in v2.0]</code></a></li>
+<li><a href="#importing-a-list-of-orders-code-import-code">3.11. Importing a list of orders : <code>import</code></a></li>
+<li><a href="#listing-orders-code-list-code">3.12. Listing orders : <code>list</code></a></li>
 </ul>
 </li>
 <li><a href="#faq">4. FAQ</a></li>
@@ -319,6 +321,60 @@ There is no need to save manually.</p>
 <p><em>{explain how the user can enable/disable data encryption}</em></p>
 </div>
 </div>
+<div class="sect2">
+<h3 id="importing-a-list-of-orders-code-import-code"><a class="link" href="#importing-a-list-of-orders-code-import-code">3.11. Importing a list of orders : <code>import</code></a></h3>
+<div class="paragraph">
+<p>You will be able to import orders via .csv files that are given to you by your company.
+The CSV file will include all relevant and important details of the parcels; such as the customers’ names,
+transaction id of the parcels and the address of the customers, etc.<br></p>
+</div>
+<div class="paragraph">
+<p>Format: <code>import FILE NAME</code></p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>Import the specific csv with the file name in data folder to the application</p>
+</li>
+<li>
+<p>The FILE NAME should include the extension. For example: <strong>orders.csv</strong>.</p>
+</li>
+<li>
+<p>The CSV file should store at data folder that is at the same directory as the JAR file.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>import orders.csv</code><br>
+Import the contents of the csv file <code>orders.csv</code> to Delino.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="listing-orders-code-list-code"><a class="link" href="#listing-orders-code-list-code">3.12. Listing orders : <code>list</code></a></h3>
+<div class="sect3">
+<h4 id="description"><a class="link" href="#description">Description</a></h4>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>You can request to list the delivery order to see.
+The done status of the delivery order will be used to list the delivery orders which have the same status.
+There are three types of list commands that are shown in the examples below.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
 </div>
 </div>
 <div class="sect1">
@@ -355,6 +411,10 @@ e.g. <code>edit 2 n/James Lee e/jameslee@example.com</code></p>
 e.g. <code>find James Jake</code></p>
 </li>
 <li>
+<p><strong>Import</strong> : <code>import FILE NAME</code><br>
+e.g. <code>import orders.csv</code></p>
+</li>
+<li>
 <p><strong>List</strong> : <code>list</code></p>
 </li>
 <li>
@@ -363,4 +423,4 @@ e.g. <code>find James Jake</code></p>
 </ul>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-02-27 16:11:42 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-02-27 17:00:22 UTC</div></div></div></body></html>
